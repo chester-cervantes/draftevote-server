@@ -38,12 +38,3 @@ exports.login = async (req, res, next) => {
         return next(error);
     }
 };
-
-exports.hello = async (req, res, next) => {
-    try {
-        res.json({hi: 'league'})
-    } catch(error) {
-        error.message = 'something bad';
-        return next(error);
-    }
-}
